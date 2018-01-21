@@ -1,4 +1,4 @@
-var cacheName = 'test-cache-v1';
+var cacheName = 'test-cache-v2';
 var dataCacheName = 'test-dataCache-v1';
 var filesToCache = [
   '/',
