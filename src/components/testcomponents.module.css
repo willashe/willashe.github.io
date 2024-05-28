@@ -97,11 +97,13 @@
   }
 }
 
-.banner-bg {
+.bg-banner {
   position: absolute;
   height: 400px;
   width: 100vw;
   cursor: default;
+  top: 50svh;
+  transform: translateY(-50%);
   background: red;
 }
 

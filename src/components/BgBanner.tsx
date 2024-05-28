@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 
 import styles from './testcomponents.module.css';
 
-type BannerBgProps = {
+type BgBannerProps = {
   debug?: boolean;
 };
 
-export default function TestBannerBg({ debug }: BannerBgProps) {
+export default function TestBgBanner({ debug }: BgBannerProps) {
   const [orientation, setOrientation] = useState<{
     x: number;
     y: number;
@@ -32,7 +32,7 @@ export default function TestBannerBg({ debug }: BannerBgProps) {
 
   return (
     <>
-      <div className={styles['banner-bg']}>TEST</div>
+      <div className={styles['bg-banner']}>TEST</div>
       {debug ? (
         <div>
           {orientation?.x || 0}, {orientation?.y || 0}
