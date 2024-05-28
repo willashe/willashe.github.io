@@ -15,10 +15,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
   } | null>();
   const callbackRef = useCallback((node: HTMLDivElement) => {
     console.log(node);
-    node.style.top = '50svh';
-    node.style.position = 'translateY(-50%)';
-    node.style.position = 'relative';
-    window.scrollTo(0, 10);
+    node.style.willChange = 'transform';
   }, []);
 
   useEffect(() => {
@@ -42,6 +39,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
       <div
         ref={callbackRef}
         style={{
+          position: 'relative',
           top: '50svh',
           transform: 'translateY(-50%)',
           height: 400,
