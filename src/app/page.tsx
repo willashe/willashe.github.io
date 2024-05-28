@@ -16,6 +16,21 @@ export default function Home() {
       </div>
 
       <Skillset />
+
+      {process.env.NODE_ENV === 'production' ? (
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            color: 'white',
+            fontFamily: 'monospace',
+            margin: 10,
+          }}
+        >
+          prod
+        </div>
+      ) : null}
     </div>
   );
 }
