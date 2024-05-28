@@ -49,7 +49,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
           background: 'red',
         }}
       >
-        test2
+        test3
       </div>
       {/* <div className={styles['bg-banner']} /> */}
       {debug ? (
