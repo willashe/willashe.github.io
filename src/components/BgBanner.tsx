@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 // import styles from './testcomponents.module.css';
 
@@ -13,6 +13,10 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     x: number;
     y: number;
   } | null>();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     // TODO: debounce
     const handleOrientation = (event: DeviceOrientationEvent) => {
@@ -33,15 +37,16 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     <>
       <div
         style={{
+          position: 'relative',
           top: '50svh',
-          transform: 'translateY(50%)',
+          transform: 'translateY(-50%)',
           height: 400,
           width: '100%',
           margin: 0,
           background: 'red',
         }}
       >
-        test
+        test2
       </div>
       {/* <div className={styles['bg-banner']} /> */}
       {debug ? (
