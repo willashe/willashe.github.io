@@ -33,17 +33,18 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     <>
       <div
         style={{
+          position: 'absolute',
           display: 'flex',
           alignItems: 'center',
           top: '50svh',
-          transform: 'translateY(50%)',
+          transform: 'translateY(-50%)',
           height: 400,
           width: '100%',
           margin: 0,
           background: 'red',
         }}
       >
-        test
+        test1
       </div>
       {/* <div className={styles['bg-banner']} /> */}
       {debug ? (
