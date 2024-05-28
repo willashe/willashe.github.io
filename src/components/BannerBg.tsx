@@ -12,8 +12,7 @@ export default function BannerBg() {
       let y = event.gamma; // -90 - 90
 
       if (node && x !== null && y !== null) {
-        node.style.backgroundPositionX = `${x * (100 / 180)}%`;
-        node.style.backgroundPositionY = `${y * (50 / 90)}%`;
+        node.style.backgroundPosition = `${x * (100 / 180)}% ${y * (50 / 90)}%`;
       }
     };
 
