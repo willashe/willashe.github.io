@@ -37,11 +37,7 @@ export default function BannerBg() {
             : undefined,
         }}
       />
-      <div>
-        {orientation
-          ? `${Math.round((orientation.y + 90) * (100 / 90))}%`
-          : null}
-      </div>
+      <div>{orientation ? orientation.y : null}</div>
     </>
   );
 }
