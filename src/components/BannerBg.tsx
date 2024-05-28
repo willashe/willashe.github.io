@@ -33,13 +33,13 @@ export default function BannerBg() {
         style={{
           animation: orientation ? 'none' : undefined,
           backgroundPositionX: orientation
-            ? `${Math.round((orientation.x + 180) * (100 / 360))}%`
+            ? `${Math.round((orientation.y + 90) * (100 / 90))}%`
             : undefined,
         }}
       />
       <div>
         {orientation
-          ? `${Math.round((orientation.x + 180) * (100 / 360))}%`
+          ? `${Math.round((orientation.y + 90) * (100 / 90))}%`
           : null}
       </div>
     </>
