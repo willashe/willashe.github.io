@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Assistant } from 'next/font/google';
-import './globals.css';
 import { ReactNode } from 'react';
+
+import './globals.css';
 
 const inter = Assistant({ subsets: ['latin'] });
 

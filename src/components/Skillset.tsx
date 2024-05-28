@@ -1,7 +1,9 @@
-import Image from "next/image";
+import Image from 'next/image';
+
+import styles from './components.module.css';
 
 const Skillset = () => (
-  <div className="skillset">
+  <div className={styles.skillset}>
     <h2>Skills</h2>
     <ul>
       <li>
@@ -125,30 +127,6 @@ const Skillset = () => (
           </svg>
         </i>
         MySQL
-      </li>
-    </ul>
-
-    <hr
-      style={{
-        border: "none",
-        borderBottom: "1px solid white",
-        margin: "0.5em 0",
-      }}
-    />
-
-    <h2>Personal/Side Projects</h2>
-    <ul>
-      <li>
-        <a href="/rpg-battle">
-          <Image
-            src="./images/sword-icon.png"
-            alt="RPG Battle icon"
-            title="RPG Battle"
-            height="30"
-            width="30"
-            className="pixel-image"
-          />
-        </a>
       </li>
     </ul>
   </div>
