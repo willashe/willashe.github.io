@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 // import styles from './testcomponents.module.css';
 
@@ -13,7 +13,10 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     x: number;
     y: number;
   } | null>();
-  useLayoutEffect(() => {
+  const callbackRef = useCallback((node: HTMLDivElement) => {
+    console.log(node);
+    node.style.top = '50svh';
+    node.style.transform = 'translateY(-50%)';
     window.scrollTo(0, 0);
   }, []);
 
@@ -36,13 +39,13 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
   return (
     <>
       <div
+        ref={callbackRef}
         style={{
           position: 'relative',
           top: '50svh',
           transform: 'translateY(-50%)',
           height: 400,
           width: '100%',
-          margin: 0,
           background: 'red',
         }}
       >
