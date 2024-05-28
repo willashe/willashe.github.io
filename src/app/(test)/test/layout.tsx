@@ -2,8 +2,6 @@ import BgBanner from '@/components/BgBanner';
 import type { Metadata } from 'next';
 import { Assistant } from 'next/font/google';
 
-import '../../globals.css';
-
 const inter = Assistant({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
