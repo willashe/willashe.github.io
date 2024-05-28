@@ -11,6 +11,7 @@ export default function Home() {
   // TODO: revisit this...hack to fix android chrome bug that has problems with svh on fresh tab page load
   const callbackRef = useCallback((node: HTMLDivElement) => {
     node.style.height = `${window.innerHeight}px`;
+    node.style.height = '100svh';
   }, []);
 
   return (
