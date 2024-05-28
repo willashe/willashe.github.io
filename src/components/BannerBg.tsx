@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './components.module.css';
 
@@ -13,10 +13,6 @@ export default function BannerBg({ debug }: BannerBgProps) {
     x: number;
     y: number;
   } | null>();
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   useEffect(() => {
     // TODO: debounce
