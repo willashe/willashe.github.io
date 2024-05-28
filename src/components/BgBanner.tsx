@@ -36,19 +36,6 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
 
   return (
     <>
-      {/* <div
-        ref={callbackRef}
-        style={{
-          position: 'absolute',
-          top: '50svh',
-          transform: 'translateY(-50%)',
-          height: 400,
-          width: '100%',
-          background: 'red',
-        }}
-      >
-        test1
-      </div> */}
       <div ref={callbackRef} className={styles['bg-banner']} />
       {debug ? (
         <div>
