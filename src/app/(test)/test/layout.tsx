@@ -17,7 +17,7 @@ export default function RootLayout() {
           display: 'flex',
           margin: 0,
           alignItems: 'center',
-          height: '100dvh',
+          height: '100vh',
         }}
       >
         <div
