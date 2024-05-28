@@ -1,6 +1,10 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import {
+  // useCallback,
+  useEffect,
+  useState,
+} from 'react';
 
 // import styles from './testcomponents.module.css';
 
@@ -9,20 +13,20 @@ type BgBannerProps = {
 };
 
 export default function TestBgBanner({ debug }: BgBannerProps) {
-  const [top, setTop] = useState<number | null>(null);
+  // const [top, setTop] = useState<number | null>(null);
   const [orientation, setOrientation] = useState<{
     x: number;
     y: number;
   } | null>();
 
-  const callbackRef = useCallback((node: HTMLDivElement) => {
-    console.log(node);
-    console.log(window.innerHeight);
-    node.style.top = `${window.innerHeight / 2}px`;
+  // const callbackRef = useCallback((node: HTMLDivElement) => {
+  //   console.log(node);
+  //   console.log(window.innerHeight);
+  //   node.style.top = `${window.innerHeight / 2}px`;
 
-    const rect = node.getBoundingClientRect();
-    setTop(rect.top);
-  }, []);
+  //   const rect = node.getBoundingClientRect();
+  //   setTop(rect.top);
+  // }, []);
 
   useEffect(() => {
     // TODO: debounce
@@ -43,7 +47,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
   return (
     <>
       <div
-        ref={callbackRef}
+        // ref={callbackRef}
         style={{
           position: 'absolute',
           top: '50svh',
@@ -58,7 +62,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
       {/* <div className={styles['bg-banner']} /> */}
       {debug ? (
         <div>
-          <div>Top: {top}</div>
+          {/* <div>Top: {top}</div> */}
           <div>
             Orientation: {orientation?.x || 0}, {orientation?.y || 0}
           </div>
