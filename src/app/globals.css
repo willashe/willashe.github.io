@@ -247,21 +247,38 @@ textarea {
   }
 }
 
+@keyframes animated_gradient_bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .main {
   &:after {
     content: '';
     position: absolute;
     height: 400px;
     width: 100vw;
-    background: linear-gradient(
-      118deg,
-      rgba(45, 83, 85, 0.8),
-      rgba(206, 83, 116, 0.8)
-    );
     cursor: default;
-    top: 50vh;
-    transform: skew(0, 10deg) translateY(-50%);
+    top: 50svh;
     z-index: 0;
+    transform: skew(0, 10deg) translateY(-50%);
+    background: linear-gradient(
+      45deg,
+      rgb(25, 25, 25) 5.97%,
+      rgb(64, 22, 160) 29.07%,
+      rgb(63, 89, 228) 50.48%,
+      rgb(76, 183, 163) 70.53%,
+      rgb(246, 241, 231) 93.76%
+    );
+    background-size: 150% 150%;
+    animation: animated_gradient_bg 10s ease infinite;
   }
 }
 
