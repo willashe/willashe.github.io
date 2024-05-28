@@ -4,7 +4,11 @@ import { useEffect, useState } from 'react';
 
 import styles from './components.module.css';
 
-export default function BannerBg() {
+type BannerBgProps = {
+  debug?: boolean;
+};
+
+export default function BannerBg({ debug }: BannerBgProps) {
   const [orientation, setOrientation] = useState<{
     x: number;
     y: number;
@@ -37,7 +41,11 @@ export default function BannerBg() {
             : undefined,
         }}
       />
-      <div>{orientation ? orientation.y : null}</div>
+      {debug ? (
+        <div>
+          {orientation?.x || 0}, {orientation?.y || 0}
+        </div>
+      ) : null}
     </>
   );
 }
