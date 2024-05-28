@@ -51,12 +51,6 @@ a {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
 button {
   padding: 0.5em 1.5em;
   border: 1px solid var(--content);
