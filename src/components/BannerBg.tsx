@@ -28,17 +28,5 @@ export default function BannerBg() {
     };
   }, [handleOrientation]);
 
-  return (
-    <>
-      <div className={styles['banner-bg']} />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 4,
-          left: 4,
-          fontFamily: 'monospace',
-        }}
-      >{`${orientation.beta}, ${orientation.gamma}`}</div>
-    </>
-  );
+  return <div className={styles['banner-bg']} />;
 }
