@@ -1,4 +1,4 @@
-import BannerBg from '@/components/BannerBg';
+import BgBanner from '@/components/BgBanner';
 import type { Metadata } from 'next';
 import { Assistant } from 'next/font/google';
 import { ReactNode } from 'react';
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <BannerBg />
+        <BgBanner />
         <main className="main">{children}</main>
       </body>
     </html>
