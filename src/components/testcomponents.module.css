@@ -102,19 +102,7 @@
   height: 400px;
   width: 100vw;
   cursor: default;
-  top: 50svh;
-  z-index: 0;
-  transform: skew(0, 10deg) translateY(-50%);
-  background: linear-gradient(
-    118deg,
-    rgb(25, 25, 25) 5.97%,
-    rgb(64, 22, 160) 29.07%,
-    rgb(63, 89, 228) 50.48%,
-    rgb(76, 183, 163) 70.53%,
-    rgb(246, 241, 231) 93.76%
-  );
-  background-size: 150% 150%;
-  animation: animated_gradient_bg 10s ease infinite;
+  background: red;
 }
 
 @media (min-width: 701px) {

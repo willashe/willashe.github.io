@@ -32,18 +32,7 @@ export default function TestBannerBg({ debug }: BannerBgProps) {
 
   return (
     <>
-      <div
-        className={styles['banner-bg']}
-        style={{
-          animation: orientation ? 'none' : undefined,
-          backgroundPositionX: orientation
-            ? `${Math.round((orientation.y + 45) * (100 / 90))}%`
-            : undefined,
-          color: 'white',
-        }}
-      >
-        TEST
-      </div>
+      <div className={styles['banner-bg']}>TEST</div>
       {debug ? (
         <div>
           {orientation?.x || 0}, {orientation?.y || 0}
