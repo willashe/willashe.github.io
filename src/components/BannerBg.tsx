@@ -1,18 +1,26 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './components.module.css';
 
 export default function BannerBg() {
-  const callbackRef = useCallback((node: HTMLDivElement) => {
+  const [orientation, setOrientation] = useState<{
+    x: number;
+    y: number;
+  } | null>();
+
+  useEffect(() => {
     // TODO: debounce
     const handleOrientation = (event: DeviceOrientationEvent) => {
       let x = event.beta; // -180 - 180
       let y = event.gamma; // -90 - 90
 
-      if (node && x !== null && y !== null) {
-        node.style.backgroundPosition = `${x * (100 / 180)}% ${y * (50 / 90)}%`;
+      if (x !== null && y !== null) {
+        setOrientation({
+          x,
+          y,
+        });
       }
     };
 
@@ -23,5 +31,15 @@ export default function BannerBg() {
     };
   }, []);
 
-  return <div ref={callbackRef} className={styles['banner-bg']} />;
+  return (
+    <div
+      className={styles['banner-bg']}
+      style={{
+        animation: orientation ? 'none' : undefined,
+        backgroundPositionX: orientation
+          ? `${(orientation.x + 180) * (100 / 360)}%`
+          : undefined,
+      }}
+    />
+  );
 }
