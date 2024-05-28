@@ -13,15 +13,13 @@ export default function BannerBg() {
   useEffect(() => {
     // TODO: debounce
     const handleOrientation = (event: DeviceOrientationEvent) => {
-      let x = event.beta; // -180 - 180
-      let y = event.gamma; // -90 - 90
+      let x = Math.round(event.beta || 0); // -180 - 180
+      let y = Math.round(event.gamma || 0); // -90 - 90
 
-      if (x !== null && y !== null) {
-        setOrientation({
-          x,
-          y,
-        });
-      }
+      setOrientation({
+        x,
+        y,
+      });
     };
 
     window.addEventListener('deviceorientation', handleOrientation);
@@ -42,7 +40,6 @@ export default function BannerBg() {
             : undefined,
         }}
       />
-      <div>{`${(orientation?.x || 0 + 180) * (100 / 360)}%, ${orientation?.y}`}</div>
     </>
   );
 }
