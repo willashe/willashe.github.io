@@ -1,4 +1,3 @@
-import BannerBg from '@/components/BannerBg';
 import type { Metadata } from 'next';
 import { Assistant } from 'next/font/google';
 import { ReactNode } from 'react';
