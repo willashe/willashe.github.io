@@ -99,11 +99,17 @@
 
 .bg-banner {
   position: absolute;
-  height: 400px;
+  height: 100svh;
   width: 100vw;
-  cursor: default;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.bg-banner:after {
+  content: '';
+  position: absolute;
+  height: 400px;
+  width: 100%;
   background: red;
 }
 

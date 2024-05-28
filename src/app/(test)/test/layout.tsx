@@ -1,5 +1,10 @@
 import BgBanner from '@/components/BgBanner';
 import type { Metadata } from 'next';
+import { Assistant } from 'next/font/google';
+
+import '../../globals.css';
+
+const inter = Assistant({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: '*TEST* Will Ashe',
@@ -9,8 +14,8 @@ export const metadata: Metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
-      <body>
-        <BgBanner debug />
+      <body className={inter.className}>
+        <BgBanner />
       </body>
     </html>
   );

@@ -32,7 +32,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
 
   return (
     <>
-      <div className={styles['bg-banner']}>TEST</div>
+      <div className={styles['bg-banner']} />
       {debug ? (
         <div>
           {orientation?.x || 0}, {orientation?.y || 0}
