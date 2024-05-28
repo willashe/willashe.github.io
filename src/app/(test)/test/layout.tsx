@@ -8,7 +8,7 @@ import '../../globals.scss';
 const inter = Assistant({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: '*TEST* Will Ashe',
+  title: 'Will Ashe',
   description: 'Will Ashe - Software Engineer - Austin, TX',
 };
 
