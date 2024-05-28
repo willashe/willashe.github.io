@@ -15,7 +15,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
   } | null>();
   const callbackRef = useCallback((node: HTMLDivElement) => {
     console.log(node);
-    node.style.willChange = 'transform';
+    node.style.opacity = '100';
   }, []);
 
   useEffect(() => {
@@ -39,6 +39,8 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
       <div
         ref={callbackRef}
         style={{
+          opacity: 0,
+          transition: 'opacity 1s ease-in-out',
           position: 'relative',
           top: '50svh',
           transform: 'translateY(-50%)',
