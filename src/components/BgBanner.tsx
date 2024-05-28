@@ -14,6 +14,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     y: number;
   } | null>();
 
+  // TODO: revisit this...hack to fix android chrome bug that has problems with svh on fresh tab page load
   const callbackRef = useCallback((node: HTMLDivElement) => {
     node.style.top = `${window.innerHeight / 2}px`;
   }, []);

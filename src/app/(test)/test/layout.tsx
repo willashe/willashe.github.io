@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <BgBanner />
-        <main className="main">*TEST* {children}</main>
+        <main className="main">{children}</main>
       </body>
     </html>
   );
