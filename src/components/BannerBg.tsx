@@ -32,14 +32,17 @@ export default function BannerBg() {
   }, []);
 
   return (
-    <div
-      className={styles['banner-bg']}
-      style={{
-        animation: orientation ? 'none' : undefined,
-        backgroundPositionX: orientation
-          ? `${(orientation.x + 180) * (100 / 360)}%`
-          : undefined,
-      }}
-    />
+    <>
+      <div
+        className={styles['banner-bg']}
+        style={{
+          animation: orientation ? 'none' : undefined,
+          backgroundPositionX: orientation
+            ? `${(orientation.x + 180) * (100 / 360)}%`
+            : undefined,
+        }}
+      />
+      <div>{`${(orientation?.x || 0 + 180) * (100 / 360)}%, ${orientation?.y}`}</div>
+    </>
   );
 }
