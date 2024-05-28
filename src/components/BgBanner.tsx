@@ -17,8 +17,10 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
 
   const callbackRef = useCallback((node: HTMLDivElement) => {
     console.log(node);
+    console.log(window.innerHeight);
+    node.style.top = `${window.innerHeight / 2}px`;
+
     const rect = node.getBoundingClientRect();
-    console.log(rect);
     setTop(rect.top);
   }, []);
 
