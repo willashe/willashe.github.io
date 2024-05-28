@@ -19,7 +19,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     const node = ref.current;
 
     if (node) {
-      node.style.top = 'calc(50svh - 200px)';
+      node.style.top = '50svh';
     }
   }, []);
 
@@ -44,10 +44,13 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
       <div
         ref={ref}
         style={{
-          position: 'absolute',
-          top: 'calc(50svh - 200px)',
+          display: 'flex',
+          alignItems: 'center',
+          top: '50svh',
+          transform: 'translateY(50%)',
           height: 400,
           width: '100%',
+          margin: 0,
           background: 'red',
         }}
       >
