@@ -1,3 +1,4 @@
+import BgBanner from '@/components/BgBanner';
 import type { Metadata } from 'next';
 import { Assistant } from 'next/font/google';
 
@@ -11,24 +12,8 @@ export const metadata: Metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        style={{
-          display: 'flex',
-          margin: 0,
-          alignItems: 'center',
-          height: '100vh',
-        }}
-      >
-        <div
-          style={{
-            height: 400,
-            width: '100%',
-            background: 'red',
-          }}
-        >
-          test
-        </div>
+      <body className={inter.className}>
+        <BgBanner />
       </body>
     </html>
   );
