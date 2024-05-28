@@ -1,4 +1,4 @@
-import BannerBg from '@/components/BannerBg';
+import TestBannerBg from '@/components/TestBannerBg';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <body>
-        <BannerBg debug />
+        <TestBannerBg debug />
       </body>
     </html>
   );
