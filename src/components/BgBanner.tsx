@@ -1,6 +1,10 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import {
+  useEffect, // useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 // import styles from './testcomponents.module.css';
 
@@ -15,13 +19,13 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
   } | null>();
   const ref = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    const node = ref.current;
+  // useLayoutEffect(() => {
+  //   const node = ref.current;
 
-    if (node) {
-      node.style.top = '50svh';
-    }
-  }, []);
+  //   if (node) {
+  //     node.style.top = '50svh';
+  //   }
+  // }, []);
 
   useEffect(() => {
     // TODO: debounce
