@@ -1,4 +1,3 @@
-import BgBanner from '@/components/BgBanner';
 import type { Metadata } from 'next';
 import { Assistant } from 'next/font/google';
 
