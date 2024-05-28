@@ -9,13 +9,17 @@ type BgBannerProps = {
 };
 
 export default function TestBgBanner({ debug }: BgBannerProps) {
+  const [top, setTop] = useState<number | null>(null);
   const [orientation, setOrientation] = useState<{
     x: number;
     y: number;
   } | null>();
+
   const callbackRef = useCallback((node: HTMLDivElement) => {
     console.log(node);
-    node.style.opacity = '100';
+    const rect = node.getBoundingClientRect();
+    console.log(rect);
+    setTop(rect.top);
   }, []);
 
   useEffect(() => {
@@ -39,9 +43,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
       <div
         ref={callbackRef}
         style={{
-          opacity: 0,
-          transition: 'opacity 1s ease-in-out',
-          position: 'relative',
+          position: 'absolute',
           top: '50svh',
           transform: 'translateY(-50%)',
           height: 400,
@@ -49,12 +51,15 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
           background: 'red',
         }}
       >
-        test3
+        test1
       </div>
       {/* <div className={styles['bg-banner']} /> */}
       {debug ? (
         <div>
-          {orientation?.x || 0}, {orientation?.y || 0}
+          <div>Top: {top}</div>
+          <div>
+            Orientation: {orientation?.x || 0}, {orientation?.y || 0}
+          </div>
         </div>
       ) : null}
     </>
