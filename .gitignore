@@ -1,5 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# practice scripts/pages
+/src/app/(practice)
+
+# threejs test app
+/public/images/textures
+/src/app/bg-app.js
+
 # dependencies
 /node_modules
 /.pnp
