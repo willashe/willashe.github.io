@@ -53,6 +53,7 @@
   }
 
   & li {
+    list-style: none;
     display: inline-block;
     margin: 0.5em;
     line-height: 1;
@@ -67,6 +68,7 @@
     }
 
     & i {
+      height: 30px;
       display: block;
       font-size: var(--icon-size);
     }
@@ -76,6 +78,10 @@
       height: var(--icon-size);
       width: var(--icon-size);
       filter: drop-shadow(0px 2px 1px black);
+    }
+
+    & svg {
+      height: 30px;
     }
   }
 

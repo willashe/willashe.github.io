@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import styles from './components.module.css';
+import styles from './components.module.scss';
 
 const Projects = () => (
   <div className={styles.projects}>

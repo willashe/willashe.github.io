@@ -1,4 +1,4 @@
-import styles from './components.module.css';
+import styles from './components.module.scss';
 
 const Hero = () => (
   <div className={styles.hero}>

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import styles from './testcomponents.module.css';
+import styles from './components.module.scss';
 
 type BgBannerProps = {
   debug?: boolean;
