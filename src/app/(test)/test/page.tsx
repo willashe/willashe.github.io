@@ -10,16 +10,7 @@ import styles from './page.module.css';
 export default function Home() {
   // TODO: revisit this...hack to fix android chrome bug that has problems with svh on fresh tab page load
   const callbackRef = useCallback((node: HTMLDivElement) => {
-    const handleResize = () => {
-      node.style.height = `${window.innerHeight}px`;
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    node.style.height = `${window.innerHeight}px`;
   }, []);
 
   return (
