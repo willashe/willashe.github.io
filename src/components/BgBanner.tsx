@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-// import styles from './testcomponents.module.css';
+import styles from './testcomponents.module.css';
 
 type BgBannerProps = {
   debug?: boolean;
@@ -36,7 +36,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
 
   return (
     <>
-      <div
+      {/* <div
         ref={callbackRef}
         style={{
           position: 'absolute',
@@ -48,8 +48,8 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
         }}
       >
         test1
-      </div>
-      {/* <div className={styles['bg-banner']} /> */}
+      </div> */}
+      <div ref={callbackRef} className={styles['bg-banner']} />
       {debug ? (
         <div>
           <div>
