@@ -20,7 +20,7 @@ const Sphere = () => {
 
       meshNode.material.transparent = true;
 
-      if (meshNode.material.opacity <= 0.3) {
+      if (meshNode.material.opacity <= 0.2) {
         meshNode.material.opacity += 0.005;
       }
     }

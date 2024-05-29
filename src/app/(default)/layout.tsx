@@ -1,5 +1,5 @@
 import BgBanner from '@/components/BgBanner';
-// import ThreeJsBg from '@/components/ThreeJsBg/ThreeJsBg';
+import ThreeJsBg from '@/components/ThreeJsBg/ThreeJsBg';
 import type { Metadata, Viewport } from 'next';
 import { Assistant } from 'next/font/google';
 import { ReactNode } from 'react';
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ThreeJsBg /> */}
+        <ThreeJsBg />
         <BgBanner />
         <main className="main">{children}</main>
       </body>
