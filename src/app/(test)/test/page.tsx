@@ -5,7 +5,7 @@ import Projects from '@/components/Projects';
 import Skillset from '@/components/Skillset';
 import { useCallback } from 'react';
 
-import styles from './page.module.css';
+import styles from '../../(default)/page.module.css';
 
 export default function Home() {
   // TODO: revisit this...hack to fix android chrome bug that has problems with svh on fresh tab page load
