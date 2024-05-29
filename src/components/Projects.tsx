@@ -18,6 +18,17 @@ const Projects = () => (
           />
         </a>
       </li>
+      <li>
+        <a href="https://catherinegee.com/" target="_blank">
+          <Image
+            src="/./images/cg-logo.png"
+            alt="Catherine Gee logo"
+            title="Catherine Gee - Designer"
+            height="30"
+            width="30"
+          />
+        </a>
+      </li>
     </ul>
   </div>
 );
