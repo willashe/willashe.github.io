@@ -20,16 +20,20 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   height: 100svh;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+html {
   color: var(--content);
   font-size: 14px;
 }
 
 body {
-  height: 100svh;
-  overflow: hidden;
   background: #1e1d2d;
 }
 
