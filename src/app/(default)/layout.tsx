@@ -1,5 +1,5 @@
 import BgBanner from '@/components/BgBanner';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Assistant } from 'next/font/google';
 import { ReactNode } from 'react';
 
@@ -10,6 +10,12 @@ const inter = Assistant({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Will Ashe',
   description: 'Will Ashe - Software Engineer - Austin, TX',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  interactiveWidget: 'resizes-content',
 };
 
 export default function RootLayout({
