@@ -3,11 +3,17 @@
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skillset from '@/components/Skillset';
-import { useCallback, useState } from 'react';
+import {
+  useCallback, // useEffect, useRef,
+  useState,
+} from 'react';
 
 import styles from './page.module.css';
 
 export default function Home() {
+  // const ref = useRef<HTMLDivElement>(null);
+
+  const [resizeRan, setResizeRan] = useState<boolean>(false);
   const [height, setHeight] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
 
@@ -19,15 +25,42 @@ export default function Home() {
       const rect = node.getBoundingClientRect();
       setHeight(rect.height);
       setWindowHeight(window.innerHeight);
+
+      setResizeRan(true);
     };
 
     addEventListener('resize', handleResize);
     handleResize();
 
+    setTimeout(() => {
+      handleResize();
+    }, 100);
+
     return () => {
       removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // useEffect(() => {
+  //   const node = ref.current;
+
+  //   if (node) {
+  //     const handleResize = () => {
+  //       node.style.height = `${window.innerHeight}px`;
+
+  //       const rect = node.getBoundingClientRect();
+  //       setHeight(rect.height);
+  //       setWindowHeight(window.innerHeight);
+  //     };
+
+  //     addEventListener('resize', handleResize);
+  //     handleResize();
+
+  //     return () => {
+  //       removeEventListener('resize', handleResize);
+  //     };
+  //   }
+  // }, []);
 
   return (
     <div ref={callbackRef} className={styles.home}>
@@ -48,6 +81,7 @@ export default function Home() {
           fontSize: 8,
         }}
       >
+        <div>Resize Ran? {String(resizeRan)}</div>
         <div>Container Height: {height}</div>
         <div>Window Height: {windowHeight}</div>
       </div>
