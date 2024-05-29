@@ -106,11 +106,11 @@
   transform: skew(0, 10deg) translateY(-50%);
   background: linear-gradient(
     118deg,
-    rgb(25, 25, 25) 5.97%,
-    rgb(64, 22, 160) 29.07%,
-    rgb(63, 89, 228) 50.48%,
-    rgb(76, 183, 163) 70.53%,
-    rgb(246, 241, 231) 93.76%
+    rgba(25, 25, 25, 0.7) 5.97%,
+    rgba(64, 22, 160, 0.7) 29.07%,
+    rgba(63, 89, 228, 0.7) 50.48%,
+    rgba(76, 183, 163, 0.7) 70.53%,
+    rgba(246, 241, 231, 0.7) 93.76%
   );
   background-size: 150% 150%;
   animation: animated_gradient_bg 10s ease infinite;
