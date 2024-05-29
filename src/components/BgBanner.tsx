@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './components.module.scss';
 
@@ -13,11 +13,6 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     x: number;
     y: number;
   } | null>();
-
-  // TODO: revisit this...hack to fix android chrome bug that has problems with svh on fresh tab page load
-  const callbackRef = useCallback((node: HTMLDivElement) => {
-    node.style.top = `${window.innerHeight / 2}px`;
-  }, []);
 
   useEffect(() => {
     // TODO: debounce
@@ -37,7 +32,7 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
 
   return (
     <>
-      <div ref={callbackRef} className={styles['bg-banner']} />
+      <div className={styles['bg-banner']} />
       {debug ? (
         <div>
           <div>
