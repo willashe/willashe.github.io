@@ -34,7 +34,17 @@ export default function TestBgBanner({ debug }: BgBannerProps) {
     <>
       <div className={styles['bg-banner']} />
       {debug ? (
-        <div>
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            margin: 8,
+            color: 'white',
+            fontFamily: 'monospace',
+            fontSize: 8,
+          }}
+        >
           <div>
             Orientation: {orientation?.x || 0}, {orientation?.y || 0}
           </div>
