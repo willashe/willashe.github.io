@@ -30,11 +30,10 @@ export default function Home() {
     };
 
     addEventListener('resize', handleResize);
-    handleResize();
 
     setTimeout(() => {
       handleResize();
-    }, 100);
+    }, 1000);
 
     return () => {
       removeEventListener('resize', handleResize);
