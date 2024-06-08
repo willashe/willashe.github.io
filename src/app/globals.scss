@@ -30,6 +30,12 @@ body {
   margin: 0;
 }
 
+html,
+body,
+main {
+  height: 100%;
+}
+
 a {
   color: var(--content);
   text-decoration: none;
