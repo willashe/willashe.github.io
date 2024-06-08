@@ -3,10 +3,6 @@
 # practice scripts/pages
 /src/app/(practice)
 
-# threejs test app
-/public/images/textures
-/src/app/bg-app.js
-
 # dependencies
 /node_modules
 /.pnp
