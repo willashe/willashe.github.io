@@ -19,6 +19,17 @@ const Projects = () => (
         </a>
       </li>
       <li>
+        <a href="/parallax-demo">
+          <Image
+            src="/./images/prllx-icon.png"
+            alt="Parralax demo icon"
+            title="Parallas Demo"
+            height="30"
+            width="30"
+          />
+        </a>
+      </li>
+      <li>
         <a href="https://catherinegee.com/" target="_blank">
           <Image
             src="/./images/cg-logo.png"
