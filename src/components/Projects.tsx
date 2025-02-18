@@ -7,6 +7,17 @@ const Projects = () => (
     <h2>Personal/Side Projects</h2>
     <ul>
       <li>
+        <a href="/parallax-demo">
+          <Image
+            src="/./images/prllx-icon.png"
+            alt="Parralax demo icon"
+            title="Parallas Demo"
+            height="30"
+            width="30"
+          />
+        </a>
+      </li>
+      <li>
         <a href="/rpg-battle">
           <Image
             src="/./images/sword-icon.png"
@@ -15,17 +26,6 @@ const Projects = () => (
             height="30"
             width="30"
             className={styles['pixel-image']}
-          />
-        </a>
-      </li>
-      <li>
-        <a href="/parallax-demo">
-          <Image
-            src="/./images/prllx-icon.png"
-            alt="Parralax demo icon"
-            title="Parallas Demo"
-            height="30"
-            width="30"
           />
         </a>
       </li>
