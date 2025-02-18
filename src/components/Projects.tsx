@@ -30,6 +30,17 @@ const Projects = () => (
         </a>
       </li>
       <li>
+        <a href="/dragon">
+          <Image
+            src="/./images/dragon-icon.png"
+            alt="Dragon icon"
+            title="Dragon demo"
+            height="30"
+            width="30"
+          />
+        </a>
+      </li>
+      <li>
         <a href="https://catherinegee.com/" target="_blank">
           <Image
             src="/./images/cg-logo.png"
